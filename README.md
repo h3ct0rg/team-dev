@@ -3,6 +3,15 @@
 Un equipo de desarrollo definido en Markdown puro:
 - **Agnóstico del lenguaje**: se adapta al stack de cada proyecto (Python, Go, Java, .NET, Node, etc.).
 - **Agnóstico de la herramienta**: funciona con Claude Code, Cursor, GitHub Copilot, Codex o cualquier IA con acceso a archivos.
+- **Agnóstico del modelo y del proveedor**: se puede usar con cualquier harness de IA, sea de OpenAI (GPT, Codex), Anthropic (Claude), DeepSeek, Google (Gemini), Mistral, Qwen o modelos locales (Ollama, LM Studio). No usa APIs, formatos ni funciones propias de ningún proveedor: son instrucciones en Markdown que cualquier modelo puede seguir.
+
+## Requisitos del harness
+Cualquier agente o harness de IA sirve si puede:
+1. **Leer y escribir archivos** (los archivos de rol y la carpeta de la tarea).
+2. **Ejecutar comandos** en la terminal (build, tests y lint del proyecto).
+3. *(Opcional)* **Lanzar subagentes**. Si puede, el CTO delega cada rol en un subagente. Si no, el mismo agente toma cada rol por turno.
+
+Ejemplos: Claude Code, OpenAI Codex CLI, Cursor, GitHub Copilot (modo agente), Aider, Cline, Roo Code, Continue, OpenHands, Gemini CLI, o un harness propio sobre la API de OpenAI, Anthropic o DeepSeek, entre otros.
 
 ## Roles
 | Archivo | Rol | Responsabilidad |
